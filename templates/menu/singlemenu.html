@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+ 
+
+<div class="row">
+   
+      <div class="card" id="card" style="width: 18rem;">
+        <div class="pass">
+        <div class="card-body">
+          <h5 class="card-title">{{menu.title}}</h5>
+          <p class="card-text">AVAILABLE = {{menu.inventory}}</p>
+          <a href="#" class="btn btn-primary">₹{{menu.price}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<style>
+ 
+</style>
+
+{% endblock %}

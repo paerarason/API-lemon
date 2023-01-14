@@ -1,0 +1,91 @@
+{% extends 'index.html' %}
+
+{% block content %}
+ 
+<div class="box-container">
+  <div class="container">
+    <div class="row" id="row">
+      {% for i in menu %}     
+       <div class="card text-center" id="card">       
+          <h3 class="title">{{i.title}}</h3>
+          <h5 class="card-title">$-{{i.price}} <br>After GST $-{{i.price_after_gst}}</h5>
+          <button class="btn" onclick="myFunction('{{i.id}}')">ORDER
+          </button>
+        </div>
+    {%endfor%}
+    </div>
+  </div>
+</div> 
+
+
+<style>
+  #card
+  {
+ background-color:  rgb(64, 56, 65);
+    color: rgb(245, 245, 245);
+    height: 200px;
+    width: 350px;
+    text-align: center;
+    justify-content:center;
+    row-gap: 2rem;
+    
+  }
+  #card:hover
+  {
+    background-color:  rgb(107, 79, 104);
+    color: rgb(7, 4, 4);
+  }
+  .card-title
+  {
+    color: rgb(236, 232, 222);
+  }
+  #but:hover
+  {
+   background-color: aquamarine;
+  }
+  .container
+  {
+    display: grid;
+   align-items: center;
+   align-content: center;
+  }
+  .container
+  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .row
+  {
+    display: flex;
+    justify-content: center;
+    align-content: center;gap: 8px;
+  }
+  .btn
+  {
+    background-color:  rgb(16, 26, 31);
+    color: antiquewhite;
+  }
+  .btn:hover
+  {
+    background-color:  rgb(53, 92, 112);
+    color: antiquewhite;
+  }
+  .title{
+  color: rgb(237, 30, 30);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+</style>
+<script>  
+  function myFunction(id) {  
+    //const userAction = async () => {
+      //const response = await fetch('http://example.com/movies.json');
+      //const myJson = await response.json(); //extract JSON from the http response
+      // do something with myJson
+    //}
+    alert('ID='+id)
+  }  
+  </script>  
+{% endblock %}
+

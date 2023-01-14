@@ -1,0 +1,67 @@
+{% extends 'index.html' %}
+
+{% block content %}
+ 
+
+<div class="box-container">
+  <div class="container">
+    <div class="row">
+      {% for i in menu %}     
+      <a href="{% url 'cat_menu' i.id %}" class="card text-center" id="card">       
+          <h5>{{i.title}}</h5>      
+      </a>
+    {%endfor%}
+    </div>
+  </div>
+</div> 
+
+
+<style>
+  #card
+  {
+    background-color: rgba(72, 131, 170, 0.841);
+    color: rgb(228, 238, 239);
+    height: 200px;
+    width: 350px;
+    text-align: center;
+    justify-content:center;
+    border-width: 5px;
+    border-color: rgb(194, 233, 128);
+  }
+  #card:hover
+  {
+    background-color:  rgba(0, 77, 129, 0.841);
+    color: rgb(238, 230, 230);
+  }
+  .card-title
+  {
+    color: rgb(230, 235, 227);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    font-style: oblique;
+  }
+  #but:hover
+  {
+   background-color: aquamarine;
+  }
+  .container
+  {
+    display: grid;
+   align-items: center;
+   align-content: center;
+  }
+  .container
+  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .row
+  {
+    display: flex;
+    justify-content: center;
+    align-content: center;gap: 8px;
+  }
+</style>
+
+{% endblock %}
