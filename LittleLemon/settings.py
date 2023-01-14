@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u&z+$39*-up8@w5729=%kh=ut7c3il8u)elpq#9+j3pk**j5)m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
+    'front',
 ]
 
 MIDDLEWARE = [
